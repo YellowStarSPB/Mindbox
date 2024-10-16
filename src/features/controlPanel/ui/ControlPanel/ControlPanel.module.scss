@@ -1,0 +1,29 @@
+.controlPanel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 1px solid var(--gray);
+    .controls {
+        display: flex;
+        align-items: center;
+    }
+    .filterButton,
+    .clearButton {
+        padding: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        margin-right: 20px;
+        transition: border-color 0.3s ease-in-out;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            border-color: var(--main-color);
+        }
+        &.active {
+            border-color: var(--main-color);
+        }
+    }
+}
