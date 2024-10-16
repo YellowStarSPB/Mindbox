@@ -1,0 +1,48 @@
+.todoItem {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 20px;
+    border-bottom: 1px solid var(--gray);
+    &:last-child {
+        // border-bottom: none;
+    }
+    &.completed {
+        opacity: 0.4;
+        .todoValue {
+            text-decoration: line-through;
+        }
+    }
+    .completedButton {
+        margin-right: 20px;
+        cursor: pointer;
+        input {
+            display: none;
+            &:checked {
+                + .customCheckbox {
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .customCheckbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid var(--black);
+            &:before {
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: var(--main-color);
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+        }
+    }
+}
