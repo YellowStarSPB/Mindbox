@@ -1,0 +1,15 @@
+.todoList {
+    transition: height 0.3s ease-in-out;
+    height: 300px;
+    overflow-y: auto;
+
+    &.hide {
+        height: 0;
+        // overflow: hidden;
+    }
+    .todoListEmpty{
+        text-align: center;
+        font-size: 25px;
+        margin-top: 40px;
+    }
+}
