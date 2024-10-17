@@ -5,7 +5,6 @@ export const filteredTodos = (state: RootState, filter: InitialTodoState['filter
     const todos = state.todo.todos;
 
     if (filter === 'all') {
-        console.log(1)
         return todos;
     }
     return todos.filter((todo) => {
